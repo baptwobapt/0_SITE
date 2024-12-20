@@ -1,0 +1,106 @@
+
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Edge */
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.moi {
+    width: 200px;
+    height: 200px;
+    display: block; 
+    margin: 0 auto; 
+}
+.card {
+    margin-top: 20px;
+    width: 700px;
+    height: 1000px;
+    background: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.exter {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.inter {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background-color: rgb(59, 71, 109);
+    color: aliceblue;
+}
+h2 {
+    position: relative;
+    margin: 0 auto; 
+    display: block; 
+    text-align: center; 
+}
+
+.st {
+    margin: auto;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+h6 {
+    margin: 0%;
+    padding-bottom: 10px; /* Ajoute un espacement interne en bas du paragraphe */
+    font-size: small;
+}
+p {
+    margin: 0%;
+    margin-left: 4% ;
+    font-size: smaller;
+    padding-bottom: 0px; 
+}
+h5 {
+    margin: 0;
+    margin-bottom: 3px;
+    margin-left: 2%;
+    margin-top: 3%;
+    padding-bottom: 0px;
+    font-size: medium;
+    font-weight: 900;
+}
+.inter2 , .exter2 {
+    margin: 4%;
+    margin-top: 20%;
+}
+.p3 {
+    width: 250px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 10px;
+    
+}
+.sepap3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.separcertif {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.separexpe {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

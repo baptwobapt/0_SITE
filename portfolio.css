@@ -1,0 +1,111 @@
+body {
+    width: 100%; /* Prend toute la hauteur */
+    top: 0;
+    left: 0;
+
+    /* Grille */
+    --gap: 5em;
+    --line: 2px;
+    --color: rgba(255, 255, 255, 0.2);
+
+    background-image: 
+    linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+    ),
+    linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+    );
+
+    background-size: var(--gap) var(--gap);
+    background-position: center;
+
+    /* Dégradé inversé */
+    z-index: 0; /* En arrière-plan */
+}
+.ligneport {
+    height: 2px;
+    width: 330px;
+    margin-left: -10px;
+    margin-top: -22px;
+    background-color: #ffffff;
+}
+.ligneportph {
+    height: 1px;
+    width: 330px;
+    margin-left: -10px;
+    margin-top: -5px;
+    background-color: #ffffff;
+}
+.miniascratch {
+    margin-left: -15px;
+    margin-top: -25px;
+    width: 330px;
+
+}
+.miniapack {
+    margin-left: -15px;
+    margin-top: -10px;
+    width: 250px;
+
+}
+.miniamotion {
+    margin-left: -15px;
+    margin-top: -25px;
+    width: 330px;
+}
+.miniamusba {
+    margin-left: -15px;
+    margin-top: -9px;
+    width: 330px;
+
+}
+.card1 {
+    margin-bottom: 150px;
+    width: 300px;
+    height: 168.75px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: -40px 50px 30px rgba(255, 255, 255, 0.28);
+    transform: skewX(5deg);
+    transition: .4s;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 15px 20px rgb(255, 255, 255); /* Ombre douce */
+    text-decoration: none; 
+    
+    
+}
+
+.card1:hover {
+    margin-bottom: 43.5px;
+    height: 275px;
+    transform: skew(0deg);
+}
+.card1 h1 {
+  margin: 1.3rem;
+  color: rgb(218, 244, 237);
+  text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+}
+.aligmentcard {
+    margin: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.refproject {
+    display: flex;
+    justify-content: end;
+
+    margin-top: -5px;
+}
+.titlecard {
+    font-size: 20px
+}

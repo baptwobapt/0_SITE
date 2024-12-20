@@ -1,0 +1,311 @@
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.smooth-scroll-content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari et Edge */
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #0c0c0c;
+   /* Fond principal */
+}
+
+/* Grille avec le dégradé */
+.bodymaissans3d {
+  margin-top: 0px;
+  width: 100%; /* Prend toute la hauteur */
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /* Grille */
+  --gap: 5em;
+  --line: 2px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: 
+    linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+
+  background-size: var(--gap) var(--gap);
+  background-position: center;
+
+  /* Dégradé inversé */
+  z-index: 0; /* En arrière-plan */
+}
+
+
+
+
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 3.5em; }
+h2 {
+  color: #888;
+  font-size: 2em;
+}
+.moi {
+  width: 300px;
+  margin-top: 50px;
+}
+.desc {
+  font-size: 20px;
+  text-align: start;
+  margin: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+
+}
+.card {
+  margin: auto;
+  margin-top: 50px;
+  width: 500px;
+  height: 700px;
+  perspective: 1000px; /* Perspective pour l'effet 3D */
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  transform: translate(-50%); 
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Active le rendu 3D */
+  transition: transform 0.6s; /* Animation fluide */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Retourne la carte au survol */
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Cache la face arrière quand elle est derrière */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px; /* Coins arrondis */
+  color: rgb(255, 255, 255);
+  border: 0px solid rgb(248, 248, 248);
+  border-radius: 30px;
+  box-shadow: 0 0px 20px rgb(255, 254, 254);
+  background-color: #0c0c0c;
+}
+
+
+.card-back {
+ /* Couleur plus foncée pour la face arrière */
+  transform: rotateY(180deg); /* Positionne la face arrière */
+}
+/* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: rgb(255, 255, 255);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px rgb(255, 255, 255);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+.cvimg {
+  margin-top: 30px;
+  height: 500px;
+  border-radius: 20px;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.changementpage {
+  height: 30px;
+  margin-left: 400px;
+  
+}
+.outils {
+  margin-bottom: -100px;
+}
+.espace {
+  margin-top: 45%;
+}
+.model-3d-container {
+  height: 100%;
+}

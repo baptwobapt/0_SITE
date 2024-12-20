@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+.Logo {
+    position: absolute;
+    width: 40px; /* Taille de base, ajustable selon vos préférences */
+    margin-top: 10px;
+    top: 0px;
+    display: flex;
+    transition: width 0.3s ease-in-out; /* Ajout d'une transition pour un effet plus fluide */
+}
+
+
+.main-header {
+    
+    display: flex; /* Fixe le header en haut de l'écran */
+    top: 0px ; /* Position à 0px du haut */
+    left: 0px; /* Position à 0px de la gauche */
+    width: 100%; /* Le header occupe toute la largeur de l'écran */
+    height: 80px; /* Hauteur du header */
+    color: #fff; /* Couleur du texte */
+    font-family: "Raleway", sans-serif;
+    padding: 0 20px; /* Marges intérieures */
+    z-index: 960; /* S'assurer qu'il soit au-dessus des autres éléments */
+}
+
+
+.menu-toggle { /* Garde le menu toujours visible à un endroit précis */
+    position: absolute;
+    top: 0px;       /* Distance depuis le haut de l'écran */
+    right: 0px;      /* Distance depuis le côté gauche */
+    z-index: 1000;   /* Assure que le menu soit au-dessus des autres éléments */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    cursor: pointer ;
+    background-color: #0c0c0c00; /* Couleur de fond */
+    z-index: 1000;
+}
+.menu-toggle.active {
+    top: 15px;
+    right: 20px;
+    cursor: default;
+}
+
+
+.zoneh {
+    position: absolute;
+    top: 15px;       /* Distance depuis le haut de l'écran */
+    right: 20px;      /* Distance depuis le côté gauche */
+    z-index: 1000;   /* Assure que le menu soit au-dessus des autres éléments */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+
+    background-color: #0c0c0c00; /* Couleur de fond */
+    z-index: 900;
+}
+.zoneh.active {
+    top: 0px; 
+    right:0px;
+    width: 1000px;
+    height: 90px;
+}
+.line {
+    position: absolute;
+    align-items: center;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
+}
+.linebas {
+    position: relative; /* Position absolue pour permettre un placement précis par rapport au header */
+    left: 55%; /* Place la ligne au centre horizontalement du header */
+    top: 100%;
+    transform: translateX(-50%); /* Décale la ligne de la moitié de sa largeur pour la centrer parfaitement */
+    width: 90%; /* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
+    height: 1px; /* Épaisseur de la ligne */
+    background-color: #c7c7c7; /* Couleur de la ligne */
+    border-radius: 6px; /* Pour un effet légèrement arrondi */
+    z-index: 2000;
+
+}
+
+
+/* Large ligne */
+.line.large {
+    width: 45px;
+    height: 8px;
+    top: 25px;
+    right: 5px;
+    z-index: 1500;
+}
+
+/* Petites lignes */
+.line.small {
+    width: 30px;
+    height: 8px;
+    z-index: 1500;
+}
+
+/* Position initiale */
+.line.small.top {
+    top: 10px;
+    right: 20px;
+}
+
+.line.small.bottom {
+    top: 40px;
+    right: 5px;
+}
+
+/* Animation en croix */
+.menu-toggle.active .line.large {
+    transform: rotate(-45deg);
+}
+
+.menu-toggle.active .line.small.top {
+    transform: rotate(45deg);
+    top: 20px; /* Se regroupe vers le centre */
+    right: 17px; /* Se rapproche du centre */
+}
+
+.menu-toggle.active .line.small.bottom {
+    transform: rotate(45deg);
+    top: 30px; /* Se regroupe vers le centre */
+    right: 7px; /* Se rapproche du centre */
+}
+.menu-texts {
+    position: absolute;
+    margin-top: -150px;
+    top: 0px; /* Correction de l'espace : pas d'espace entre '0' et 'px' */
+    right: -130px;
+    display: flex;
+    flex-direction: row; /* Correction du type : 'raw' -> 'row' */
+    opacity: 1;
+    z-index: 1000;
+    pointer-events: none;
+    font-size: 20px;
+    cursor: pointer; /* Le curseur par défaut, pour éviter de montrer un élément cliquable */
+}
+
+.zoneh.active .menu-texts {
+    top: 35px;
+    right: -120px;
+    opacity: 1; /* Les textes deviennent visibles */
+    animation-delay: 1s;
+    margin-top: -15px;
+
+}
+
+.linet {
+    position: absolute;
+    display: block; /* Pour que la ligne soit visible sous le texte */
+    width: 20%; /* Largeur de la ligne, ajustez selon vos besoins */
+    height: 4px; /* Épaisseur de la ligne */
+    background-color: #fff; /* Couleur de la ligne */
+    margin-top: 25px; /* Espace entre le texte et la ligne */
+    border-radius: 6px;
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+.menu-text1:hover .linet {
+    width: 90%; /* La ligne s'agrandit pour atteindre 100% de la largeur */
+}
+.menu-text2:hover .linet {
+    width: 90%; /* La ligne s'agrandit pour atteindre 100% de la largeur */
+}
+.menu-text3:hover .linet {
+    width: 90%; /* La ligne s'agrandit pour atteindre 100% de la largeur */
+}
+
+.menu-text1 {
+    position: relative; /* Relative pour rester dans la ligne */
+    width: auto; /* Adapte la largeur au contenu */
+    padding: 0px 10px;
+    height: 50px;
+
+    color: white;
+    right: -55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Empêche le texte de se couper */
+    transform: translateX(0); /* Position initiale */
+    cursor: pointer;
+    pointer-events: none;
+}
+.menu-texts a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Utilise la couleur du texte parent */
+    display: inline-block; /* Maintient l'espacement correct */
+}
+.menu-text2 {
+    position: relative; /* Relative pour rester dans la ligne */
+    width: auto; /* Adapte la largeur au contenu */
+    padding: 0px 10px;
+    height: 50px;
+
+    color: white;
+    right: -55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Empêche le texte de se couper */
+    transform: translateX(0); /* Position initiale */
+    cursor: pointer;
+    pointer-events: none;
+}
+.menu-text3 {
+    position: relative; /* Relative pour rester dans la ligne */
+    width: auto; /* Adapte la largeur au contenu */
+    padding: 0px 10px;
+    height: 50px;
+
+    color: white;
+    right: -55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; /* Empêche le texte de se couper */
+    transform: translateX(0); /* Position initiale */
+    cursor: pointer;
+    pointer-events: none;
+}
+
+/* Lorsque .zoneh a la classe active, chaque menu-text est animé vers la gauche */
+.zoneh.active .menu-text1 {
+    transform: translateX(-420%); /* Déplace le premier texte de 30% vers la gauche */
+    transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
+    pointer-events: auto;
+}
+.zoneh.active .menu-text2 {
+    transform: translateX(-400%); /* Déplace le deuxième texte de 60% vers la gauche */
+    transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
+    pointer-events: auto;
+}
+
+.zoneh.active .menu-text3 {
+    transform: translateX(-350%); /* Déplace le troisième texte de 90% vers la gauche */
+    transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
+    pointer-events: auto;
+}

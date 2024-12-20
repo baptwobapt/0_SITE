@@ -1,0 +1,205 @@
+.main-footer {
+  margin-top: 100px;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    width: 100%; /* Le header occupe toute la largeur de l'écran */
+    height: auto; /* Hauteur du header */
+    color: #ffffff; /* Couleur du texte */
+    font-family: "Roboto";
+     /* Marges intérieures */
+}
+.phtxt {
+    display: flex; /* Fixe le header en haut de l'écran */
+    justify-content:space-between;
+    flex-direction: row;
+    gap: 40px;
+
+}
+.logof {
+    margin-top: 30px;
+    height: 200px;
+    
+}
+.colonedroite {
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+    margin-right: 40px;
+    color: #ffffff;
+
+
+
+}
+.parthautf {
+    display: flex; 
+    flex-direction: column;
+    gap: 0px;
+
+}
+
+.logo-insta, .logo-x, .logo-ytb{
+    height: 40px;
+}
+.logo-face {
+    height: 45px;
+    margin-right: -5px;
+}
+.logo-bord{
+    height: 45px;
+    margin-right: -5px;
+}
+.logo-bibl{
+    height: 45px;
+    margin-right: -5px;
+}
+.iconsbordf {
+    margin-top: 20px;
+    
+    display: flex;
+    gap: 30px;
+}
+.textinutile {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin-bottom: 10px;
+
+
+}
+.BL {
+    font-size: 20px;
+}
+.justepourlignef {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+   
+}
+.part1f {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.lignehoribasf {
+
+    height: 1px; /* Hauteur de la ligne */
+    width: 90%; /* Largeur de la ligne */
+    background-color: #ffffff; /* Couleur de la ligne */
+    margin: 10px auto; /* Centre horizontalement */
+    margin-top: 30px;
+
+}
+.lignevertcentref {
+    height: 90%; /* Hauteur de la ligne */
+    width: 1px; /* Largeur de la ligne */
+    background-color: #ffffff; /* Couleur de la ligne */
+    margin: auto auto;
+}
+.txt1f , .txt2f  {
+    font-size: 16px;
+}
+.parttxt1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: auto; /* Réactive les interactions pour le lien dans menu-text1 */
+    text-decoration: none; /* Supprime le soulignement */
+    color: white; /* Assure une bonne visibilité */
+    font-size: 20px;
+    
+    
+}
+.parttxt1 a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Utilise la couleur du texte parent */
+    display: inline-block; /* Maintient l'espacement correct */
+}
+h3 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.iconf {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #000000;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #be1d1d;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  .mail {
+    height: 30px;
+    width: auto;
+  }
+
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
