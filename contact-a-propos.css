@@ -1,0 +1,97 @@
+body {
+    width: 100%; /* Prend toute la hauteur */
+    top: 0;
+    left: 0;
+
+    /* Grille */
+    --gap: 5em;
+    --line: 2px;
+    --color: rgba(255, 255, 255, 0.2);
+
+    background-image: 
+    linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+    ),
+    linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+    );
+
+    background-size: var(--gap) var(--gap);
+    background-position: center;
+
+    /* Dégradé inversé */
+    z-index: 0; /* En arrière-plan */
+}
+.containercontact {
+    display: flex;
+    flex-direction: column;
+    margin: 50px ;
+    padding: 20px;
+    width: 500px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, textarea, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    border-color: white;
+    font-size: 16px;
+    background-color: #0c0c0c;
+    backdrop-filter: blur(1px);
+    color: azure;
+}
+textarea {
+    resize: vertical;
+}
+button {
+    width: 150px;
+}
+::placeholder {
+    color: #7e7e7e;
+}
+.iphonemockup{
+    width: 200px;
+    height: 350px;
+}
+.contactmockup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.animated-button {
+    margin-top: 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 36px;
+    border: 1px solid #000000;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 6px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
