@@ -1,0 +1,92 @@
+.photoproj {
+    width: 200px;
+    height: 150px;
+}
+.photoproj2 {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+.photoproj3 {
+    width: 250px;
+    height: auto;
+}
+.photoproj2.s {
+    margin-top: -35px;
+}
+.toutelesphotoproj3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 510px;
+
+}
+.toutelesphotoproj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 420px;
+
+}
+.toutelesphotoproj2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 420px;
+
+
+}
+.bouttonproj4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+}
+.photoproj2bas {
+    height: 200px;
+    width: auto;
+}
+.photoproj4bas {
+    height: 300px;
+    width: auto;
+}
+.phototexteproj {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2%;
+    margin: 2%;
+    align-items: center;
+    margin-top: 6%;
+
+}
+.partitextproj {
+
+    width: 40%;
+    text-align: left;
+    font-size: 17px;
+
+}
+.phototexteprojbas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2%;
+    margin: 2%;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 6%;
+
+}
+.partitextprojbas {
+    width: 40%;
+    text-align: left;
+    font-size: 17px;
+    
+
+}
+.videoscratch{
+    width: 450px;
+}
