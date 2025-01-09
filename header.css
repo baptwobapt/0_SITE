@@ -262,4 +262,7 @@
         z-index: 2000;
     
     }
+    .menu-toggle {
+        display: none;
+    }
 }
