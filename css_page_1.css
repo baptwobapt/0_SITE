@@ -350,6 +350,26 @@ h1 {
   margin-left: 4%;
   margin-right: 4%;
 }
+
+.justepourtitredebut {
+  text-align: center; /* Centrer le texte */
+  position: relative; /* Position relative pour aligner correctement */
+}
+
+.justepourtitredebut h1 {
+  display: inline-block;
+  line-height: 1.2; /* Espacement entre les lignes */
+  min-height: 3em; /* Ajustez cette valeur pour inclure la hauteur maximale du texte dynamique */
+  margin: 0; /* Supprime les marges inutiles */
+  overflow: hidden; /* Assure qu'aucun texte dépassant ne soit visible */
+}
+
+.txt-rotate {
+  display: inline-block;
+  white-space: nowrap; /* Empêche les retours à la ligne */
+  vertical-align: top; /* Aligne le texte dynamiquement */
+}
+
 @media (max-width: 800px) {
   .mockupapropocontact {
     display: flex;
@@ -373,9 +393,10 @@ h1 {
   .card:hover .card-inner {
     transform: none; /* Retourne la carte au survol */
   }
-  .justepourtitredebut {
+  .justepourtitredebut2 {
     margin-bottom: 50px;
   }
+
   .card {
     margin: auto;
     width: 350px;
@@ -418,7 +439,7 @@ h1 {
     display: none;
   }
   h1 {
-    font-size: 27px;
+    font-size: 35px;
     margin-bottom: 50px;
   }
 

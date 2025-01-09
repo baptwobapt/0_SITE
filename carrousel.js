@@ -27,7 +27,7 @@ const swiper = new Swiper('.swiper-container', {
 });
 function resizeSwiper() {
     if (window.innerWidth < 800) {
-        swiper.params.spaceBetween = -30; // Modifie l'espacement pour mobile
+        swiper.params.spaceBetween = -45; // Modifie l'espacement pour mobile
     } else {
         swiper.params.spaceBetween = 25; // Modifie l'espacement pour desktop
     }
