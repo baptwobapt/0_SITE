@@ -256,7 +256,7 @@ body h2 {
   
   }
   .swiper-container-wrapper {
-    width: 500px; /* Ajuste selon la taille souhaitée */
+    width: 100%; /* Ajuste selon la taille souhaitée */
     height: 250px;
     margin-top: 200px;
     overflow: hidden; /* Masque tout ce qui dépasse ce conteneur */
