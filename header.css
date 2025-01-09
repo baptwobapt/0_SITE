@@ -248,3 +248,18 @@
     transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
     pointer-events: auto;
 }
+@media (max-width: 800px) {
+    .linebas {
+        position: relative; /* Position absolue pour permettre un placement précis par rapport au header */
+        top: 100%;
+        left: 50%;
+        justify-content: center;
+        transform: translateX(-50%); /* Décale la ligne de la moitié de sa largeur pour la centrer parfaitement */
+        width:30%;/* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
+        height: 1px; /* Épaisseur de la ligne */
+        background-color: #c7c7c7; /* Couleur de la ligne */
+        border-radius: 6px; /* Pour un effet légèrement arrondi */
+        z-index: 2000;
+    
+    }
+}

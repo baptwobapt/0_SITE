@@ -98,6 +98,17 @@ window.addEventListener("resize", () => {
 
 // Appeler une première fois pour configurer correctement la caméra au chargement
 adjustCameraForScreenSize();
+function toggleModelVisibility() {
+    if (window.innerWidth <= 768) {
+            scene.remove(model);
+        }
+    } else {
+        // Si l'écran est desktop ou tablette, ajouter le modèle à la scène
+        if (model && !scene.children.includes(model)) {
+            scene.add(model);
+        }
+    }
+}
 
 
 const touchVector = new THREE.Vector3();

@@ -186,6 +186,9 @@ h3 {
     height: 30px;
     width: auto;
   }
+  * {
+    outline: 1px solid red;
+  }
 
   .socialContainer:hover .socialSvg {
     animation: slide-in-top 0.3s both;

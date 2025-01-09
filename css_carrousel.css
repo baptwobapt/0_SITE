@@ -261,4 +261,19 @@ body h2 {
     margin-top: 200px;
     overflow: hidden; /* Masque tout ce qui dépasse ce conteneur */
   }
+  .nav-dot {
+    position: absolute;
+    cursor: pointer;
+    margin-left: -100px;
+    bottom: -22.5px;
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  body {
+    margin: auto;
+  }
 }
