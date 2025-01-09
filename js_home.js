@@ -1,36 +1,9 @@
-// Création de la scène, de la caméra et du renderer
+// Création de la scène, de la caméra par défaut et du renderer
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
+let camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth , window.innerHeight  );
+renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-// Réduire la taille du renderer seulement sur l'axe Y
-renderer.setSize(window.innerWidth, window.innerHeight / 1.3); // Réduire uniquement la hauteur à 2/3 de l'écran, largeur inchangée
-// Création de la scène, de la caméra et du renderer
-
-
-// Réduire la couleur de fond à une valeur transparente
-renderer.setClearColor(0x0c0c0c, ); // 0 pour la transparence
-// Mettre à jour la caméra pour correspondre au nouveau ratio
-camera.aspect = window.innerWidth / (window.innerHeight / 1.3);
-camera.updateProjectionMatrix(); // Mise à jour nécessaire après changement
-
-// Gestion du redimensionnement de la fenêtre pour maintenir les proportions
-window.addEventListener('resize', () => {
-    // Ajuster le renderer et la caméra sur l'axe Y
-    renderer.setSize(window.innerWidth, window.innerHeight / 1.3);
-    renderer.setPixelRatio(window.devicePixelRatio || 1);
-
-    camera.aspect = window.innerWidth / (window.innerHeight / 1.3);
-    camera.updateProjectionMatrix();
-});
-
-// Définir la couleur de fond de la scène
-
-
-// Position de la caméra
-camera.position.set(0, 0, 2); // Caméra centrée dans l'axe Z
-camera.lookAt(0, 0, 0); // La caméra regarde le centre de la scène
 
 // Lumières
 const ambientLight = new THREE.AmbientLight(0x404040, 2);
@@ -40,21 +13,68 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(10, 10, 10);
 scene.add(directionalLight);
 
+// Position initiale de la caméra
+camera.position.set(0, 0, 5);
+camera.lookAt(0, 0, 0);
+
+// Variable pour suivre le mode actuel
+let isMobileMode = window.innerWidth <= 768;
+
+// Fonction pour ajuster la caméra en fonction de la largeur de l'écran
+function adjustCameraForScreenSize() {
+    if (window.innerWidth <= 768) {
+        if (!isMobileMode) {
+            // Passer en mode mobile
+            isMobileMode = true;
+            camera.fov = 80; // Champ de vision élargi
+            console.log("Mode mobile activé");
+        }
+    } else {
+        if (isMobileMode) {
+            // Passer en mode desktop
+            isMobileMode = false;
+            camera.fov = 50; // Champ de vision standard
+            console.log("Mode desktop activé");
+        }
+    }
+    camera.aspect = window.innerWidth / window.innerHeight; // Mettre à jour le ratio
+    camera.updateProjectionMatrix(); // Appliquer les modifications
+}
+
+// Fonction de redimensionnement
+function onResize() {
+    renderer.setSize(window.innerWidth, window.innerHeight); // Ajuster le renderer
+    adjustCameraForScreenSize(); // Réajuster la caméra
+}
+
+// Gestion initiale
+adjustCameraForScreenSize();
+
+// Écouteur pour redimensionnement
+window.addEventListener("resize", onResize);
+
 // Variable pour stocker le modèle chargé
 let model;
 
-// Écouteur d'événement pour capturer le mouvement de la souris
-const mouseVector = new THREE.Vector3();
-document.addEventListener("mousemove", (event) => {
-    mouseVector.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouseVector.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    mouseVector.z = 0.5;
+// Écouteur de mouvement (souris ou tactile)
+const inputVector = new THREE.Vector3();
+function onInputMove(event) {
+    const x = event.touches ? event.touches[0].clientX : event.clientX;
+    const y = event.touches ? event.touches[0].clientY : event.clientY;
 
-    mouseVector.unproject(camera);
+    inputVector.x = ((x / window.innerWidth) * 2 - 1) * 3; // Augmenter la sensibilité (x2)
+    inputVector.y = (-(y / window.innerHeight) * 2 + 1) * 3; // Augmenter la sensibilité (x2)
+    inputVector.z = 0.5;
+
+    inputVector.unproject(camera);
     if (model) {
-        model.lookAt(mouseVector);
+        model.lookAt(inputVector);
     }
-});
+}
+
+// Écouteurs pour mouvement
+document.addEventListener("mousemove", onInputMove);
+document.addEventListener("touchmove", onInputMove);
 
 // Chargement du modèle
 const loader = new THREE.OBJLoader();
@@ -63,8 +83,9 @@ loader.load(
     (obj) => {
         model = obj;
 
+        // Agrandir le modèle
+        model.scale.set(2, 2, 2); // Échelle doublée
         model.position.set(0, 0, 0); // Centrer le modèle
-        model.scale.set(1, 1, 1); // Échelle standard
         model.rotation.set(0, 0, 0); // Rotation initiale
         scene.add(model);
 
@@ -79,14 +100,3 @@ loader.load(
         console.error('Erreur lors du chargement du modèle OBJ:', error);
     }
 );
-
-// Gestion du redimensionnement pour un rendu en temps réel
-window.addEventListener('resize', () => {
-    // Ajuster le renderer et la caméra sur l'axe Y
-    renderer.setSize(window.innerWidth, window.innerHeight / 1.3);
-    renderer.setPixelRatio(window.devicePixelRatio || 1);
-
-    camera.aspect = window.innerWidth / (window.innerHeight / 1.3);
-    camera.updateProjectionMatrix();
-});
-
