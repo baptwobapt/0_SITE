@@ -198,8 +198,8 @@ body h2 {
 
 
 .swiper-container {
-  width: 600px;
-  height: 200px; /* Hauteur du carrousel */
+  width: 400px;
+  height: 100px; /* Hauteur du carrousel */
   margin: auto; /* Centre le conteneur horizontalement */
   margin-top: 20%;
   display: flex; /* Facilite le centrage interne si nécessaire */
@@ -214,7 +214,6 @@ body h2 {
   position: relative;
   background-size: cover;
   background-position: center;
-  width: calc(4% - 25px); /* Pour afficher 3 images avec un espacement */
   margin-right: 25px; /* Espacement entre les images */
   border-radius: 20px; /* Coins arrondis */
   box-shadow: 0 15px 20px rgb(255, 254, 254); /* Ombre douce */
@@ -243,4 +242,23 @@ body h2 {
 .swiper-button-prev {
     color: #ffffff; /* Change la couleur en fonction de tes besoins */
 
+}
+@media (max-width: 800px) {
+  .swiper-container {
+    width: 200px;
+    height: 50px; /* Hauteur du carrousel */
+    
+  }
+  .swiper-slide {
+
+    border-radius: 8px; /* Coins arrondis */
+
+  
+  }
+  .swiper-container-wrapper {
+    width: 300px; /* Ajuste selon la taille souhaitée */
+    height: 250px;
+    margin-top: 200px;
+    overflow: hidden; /* Masque tout ce qui dépasse ce conteneur */
+  }
 }
