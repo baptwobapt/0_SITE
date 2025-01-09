@@ -25,3 +25,17 @@ const swiper = new Swiper('.swiper-container', {
     },
 
 });
+function resizeSwiper() {
+    if (window.innerWidth < 800) {
+        swiper.params.spaceBetween = -30; // Modifie l'espacement pour mobile
+    } else {
+        swiper.params.spaceBetween = 25; // Modifie l'espacement pour desktop
+    }
+    swiper.update(); // Applique les modifications
+}
+
+// Appel initial au chargement de la page
+resizeSwiper();
+
+// Écoute les redimensionnements de la fenêtre
+window.addEventListener('resize', resizeSwiper);
