@@ -137,6 +137,20 @@ button {
     margin-bottom: -100px;
 }
 .margegd {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.contactbas {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-direction: row;
+}
+.contactbash2 {
+    color: rgb(252, 249, 244);
+    font-weight: 800;
+    font-size: 25px; 
+    text-shadow: none;
+    opacity: 0.9;
 }

@@ -52,49 +52,56 @@
         <div class="linebas"></div>
     </header>
     <h1>Contactez-moi</h1>
-    <div class="contactmockup">
-        <div class="containercontact">
-            <form id="contactForm" onsubmit="sendEmail(event)">
-                <input type="text" id="name" name="name" placeholder="Prénom et Nom" required>
-                <input type="text" id="subject" name="subject" placeholder="Objet du message" required>
-                <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+    <div class="margegd">
+        <div class="contactmockup">
+            <div class="containercontact">
+                <form id="contactForm" onsubmit="sendEmail(event)">
+                    <input type="text" id="name" name="name" placeholder="Prénom et Nom" required>
+                    <input type="text" id="subject" name="subject" placeholder="Objet du message" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
 
-                <button type="submit" class="animated-button">
-                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                    ></path>
-                    </svg>
-                    <span class="text">Envoyer</span>
-                    <span class="circle"></span>
-                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-                    ></path>
-                    </svg>
-                </button> 
-            </form>
+                    <button type="submit" class="animated-button">
+                        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                        ></path>
+                        </svg>
+                        <span class="text">Envoyer</span>
+                        <span class="circle"></span>
+                        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                        ></path>
+                        </svg>
+                    </button> 
+                </form>
+            </div>
+            <img src="image/iPhonemockup.png" alt="iPhonemockup" class="iphonemockup">
         </div>
-        <img src="image/iPhonemockup.png" alt="iPhonemockup" class="iphonemockup">
+        <script>
+            function sendEmail(event) {
+                event.preventDefault(); // Empêche l'envoi classique du formulaire
+
+                // Récupérer les valeurs des champs
+                const name = document.getElementById('name').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                // Créer le lien mailto avec un format de message personnalisé
+                const mailtoLink = `mailto:baptiste.louis33470@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`De : ${name}
+
+        ${message}`)}`;
+
+                // Ouvrir le client mail avec le lien
+                window.location.href = mailtoLink;
+            }
+        </script>
+        <h1>Contactez-moi autrement</h1>
+        <div class="contactbas">
+            <h2 class="contactbash2">07 68 19 74 90</h2>
+            <h2 class="contactbash2">baptiste.louis33470@gmail.com</h2>
+        </div>
     </div>
-    <script>
-        function sendEmail(event) {
-            event.preventDefault(); // Empêche l'envoi classique du formulaire
-
-            // Récupérer les valeurs des champs
-            const name = document.getElementById('name').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Créer le lien mailto avec un format de message personnalisé
-            const mailtoLink = `mailto:bapt3380@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`De : ${name}
-
-    ${message}`)}`;
-
-            // Ouvrir le client mail avec le lien
-            window.location.href = mailtoLink;
-        }
-    </script>
     <script src="header.js"></script>
     <footer class="main-footer">
         <div class="part1f">
