@@ -351,8 +351,15 @@ h1 {
   margin-right: 4%;
 }
 @media (max-width: 800px) {
+  .mockupapropocontact {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: auto; 
+    gap: 50px;
+  }
   .mockupiphonecontact {
-    width: 100px;
+    width: 120px;
     height: auto;
   }
   .mockupiphoneapropos {
@@ -361,18 +368,43 @@ h1 {
   }
   .ongletpresentation {
     flex-direction: column;
-    gap: 100px;
-    
-  
+    gap: 150px;
+  }
+  .card:hover .card-inner {
+    transform: none; /* Retourne la carte au survol */
+  }
+  .justepourtitredebut {
+    margin-bottom: 100px;
   }
   .card {
     margin: auto;
-    width: 200px;
-    height: 400px;
+    width: 350px;
+    height: 520px;
   }
   p {
-    font-size: 14px;
+    font-size: 17px;
   } 
+  .desc {
+    text-align: start;
+    margin: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .moi {
+    width: 60%;
+    margin-top: 10px;
+  }
+  .changementpage {
+    height: 30px;
+    margin-left: 270px;
+    margin-top: -10px;
+  }
+  .cvimg {
+    margin-top: 20px;
+    height: 70%;
+    border-radius: 20px;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -388,9 +420,7 @@ h1 {
   h1 {
     font-size: 30px;
   }
-  .changementpage {
-    display: none;
-  }
+
   .animated-button {
     margin-top: 40px;
     position: relative;
@@ -423,7 +453,7 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10px;
+    width: 1px;
     height: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;

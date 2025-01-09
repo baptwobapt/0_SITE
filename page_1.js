@@ -54,3 +54,35 @@ var TxtRotate = function(el, toRotate, period) {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #111 }";
   document.body.appendChild(css);
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  const card = document.querySelector('.card');
+  const cardInner = card.querySelector('.card-inner');
+
+  // Fonction pour vérifier la largeur de l'écran
+  function checkScreenSize() {
+    if (window.innerWidth < 800) {
+      // Si la largeur de l'écran est inférieure à 800px, on applique l'effet de clic
+      card.addEventListener('click', toggleCardRotation);
+    } else {
+      // Sinon, on s'assure que l'effet de clic n'est pas activé
+      card.removeEventListener('click', toggleCardRotation);
+    }
+  }
+
+  // Fonction pour inverser la rotation
+  function toggleCardRotation() {
+    if (cardInner.style.transform === 'rotateY(180deg)') {
+      cardInner.style.transform = 'rotateY(0deg)';
+    } else {
+      cardInner.style.transform = 'rotateY(180deg)';
+    }
+  }
+
+  // Vérifier la taille de l'écran au chargement
+  checkScreenSize();
+
+  // Vérifier à chaque redimensionnement de la fenêtre
+  window.addEventListener('resize', checkScreenSize);
+});
+
