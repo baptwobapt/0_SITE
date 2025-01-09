@@ -245,8 +245,8 @@ body h2 {
 }
 @media (max-width: 800px) {
   .swiper-container {
-    width: 200px;
-    height: 100px; /* Hauteur du carrousel */
+    width: 170px;
+    height: 85px; /* Hauteur du carrousel */
     
   }
   .swiper-slide {
@@ -260,6 +260,12 @@ body h2 {
     height: 250px;
     margin-top: 200px;
     overflow: hidden; /* Masque tout ce qui dépasse ce conteneur */
+  }
+  .swiper-button-next {
+    right: -5px;
+  }
+  .swiper-button-prev{
+    left: -5px;
   }
   .nav-dot {
     position: absolute;

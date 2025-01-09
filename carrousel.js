@@ -9,27 +9,30 @@ const swiper = new Swiper('.swiper-container', {
         delay: 5000,
         disableOnInteraction: false,
     },
-
-    
     loop: true,
     coverflowEffect: {
-        rotate: 50,
+        rotate: 50, // Valeur par défaut pour desktop
         stretch: -200,
         depth: 100,
         modifier: 1,
-        slideShadows: false ,
+        slideShadows: false,
     },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
 });
+
+// Fonction pour ajuster les paramètres dynamiquement
 function resizeSwiper() {
     if (window.innerWidth < 800) {
-        swiper.params.spaceBetween = -45; // Modifie l'espacement pour mobile
+        // Modifie les paramètres pour mobile
+        swiper.params.coverflowEffect.rotate = 110; // Réduit l'effet rotate
+        swiper.params.spaceBetween = -45; // Ajuste l'écart
     } else {
-        swiper.params.spaceBetween = 25; // Modifie l'espacement pour desktop
+        // Réinitialise les paramètres pour desktop
+        swiper.params.coverflowEffect.rotate = 50; // Valeur par défaut
+        swiper.params.spaceBetween = 25; // Écart par défaut
     }
     swiper.update(); // Applique les modifications
 }
