@@ -351,5 +351,30 @@ h1 {
   margin-right: 4%;
 }
 @media (max-width: 1024px) {
-
+  .mockupiphonecontact {
+    width: 100px;
+    height: auto;
+  }
+  .mockupiphoneapropos {
+    width: 150px;
+    height: auto;
+  }
+  .ongletpresentation {
+    flex-direction: column;
+    gap: 100px;
+    
+  
+  }
+  .card {
+    margin: auto;
+    width: 200px;
+    height: 400px;
+  }
+  p {
+    font-size: 14px;
+  } 
+  .margegd {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }
