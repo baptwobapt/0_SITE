@@ -40,7 +40,7 @@ body h2 {
 .carousel-wrapper {
   position: relative;
   max-width: 600px;
-  margin: 50px;
+  margin: 30px;
 }
 .carousel-wrapper input {
   display: none;
@@ -286,5 +286,43 @@ body h2 {
     margin-top: 50px;
     margin-bottom: 0;
     text-shadow: 3px 3px rgba(255, 255, 255, 0.5);
+    
   }
+  .outils {
+    margin-bottom: -200px;
+  }
+  .left-arrow {
+    left: 15px;
+    top: 110px;
+    font-size: 70px;
+  }
+  
+  .right-arrow {
+    right: 15px;
+    font-size: 70px;
+    top: 110px;
+  }
+  .nav-dot {
+    position: absolute;
+    cursor: pointer;
+    margin-left: -20px;
+    bottom: -20px;
+    width: 23px;
+    height: 23px;
+
+  }
+  .nav-dot[for=slide1] {
+    left: 30px;
+  }
+  .nav-dot[for=slide2] {
+    left: 60px;
+  }
+  .nav-dot[for=slide3] {
+    left: 90px;
+  }
+  .nav-dot[for=slide4] {
+    left: 120px;
+  }
+
+
 }

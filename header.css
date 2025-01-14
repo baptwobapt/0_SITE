@@ -265,4 +265,8 @@
     .menu-texts {
         display: none;
     }
+    .main-header {
+        width: 90%; /* Le header occupe toute la largeur de l'écran */
+
+    }
 }

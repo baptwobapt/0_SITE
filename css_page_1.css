@@ -88,7 +88,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+
   background-color: #0c0c0c;
    /* Fond principal */
 }
@@ -206,7 +206,7 @@ h2 {
   transform: rotateY(180deg); /* Positionne la face arrière */
 }
 /* From Uiverse.io by gharsh11032000 */ 
-.animated-button {
+.animated-button  {
   margin-top: 40px;
   position: relative;
   display: flex;
@@ -294,6 +294,97 @@ h2 {
   height: 220px;
   opacity: 1;
 }
+.animated-button1  {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 0 2px rgb(255, 255, 255);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  left: 100px;
+  top: 20px
+
+}
+
+.animated-button1 svg {
+  position: absolute;
+  width: 24px;
+  fill: rgb(255, 255, 255);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button1 .arr-1 {
+  right: 16px;
+}
+
+.animated-button1 .arr-2 {
+  left: -25%;
+}
+
+.animated-button1 .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button1 .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button1:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button1:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button1:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button1:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button1:hover svg {
+  fill: #212121;
+}
+
+.animated-button1:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px rgb(255, 255, 255);
+}
+
+.animated-button1:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
 .cvimg {
   margin-top: 30px;
   height: 500px;
@@ -305,9 +396,13 @@ h1 {
   font-style: normal;
 }
 .changementpage {
+  position: absolute;
   height: 30px;
-  margin-left: 400px;
-  
+  display: flex;
+  bottom: 20px;
+  right: 20px;
+
+
 }
 .outils {
   margin-bottom: -100px;
@@ -377,14 +472,17 @@ h1 {
     justify-content: start;
     margin: auto; 
     gap: 50px;
+    height: 300px;
   }
   .mockupiphonecontact {
     width: 120px;
     height: auto;
+    margin-top: -50px;
   }
   .mockupiphoneapropos {
     width: 150px;
     height: auto;
+    margin-bottom: -100px;
   }
   .ongletpresentation {
     flex-direction: column;
@@ -393,13 +491,14 @@ h1 {
   .card:hover .card-inner {
     transform: none; /* Retourne la carte au survol */
   }
-  .justepourtitredebut2 {
-    margin-bottom: 50px;
+  .justepourtitredebut {
+    padding: 10px;
+ 
   }
 
   .card {
     margin: auto;
-    width: 350px;
+    width: 300px;
     height: 520px;
   }
   p {
@@ -417,8 +516,6 @@ h1 {
   }
   .changementpage {
     height: 30px;
-    margin-left: 270px;
-    margin-top: -10px;
   }
   .cvimg {
     margin-top: 20px;
@@ -443,55 +540,10 @@ h1 {
     margin-bottom: 50px;
   }
 
-  .animated-button {
-    margin-top: 40px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 16px 36px;
-    border: 4px solid;
-    border-color: transparent;
-    font-size: 14px;
-    background-color: inherit;
-    border-radius: 100px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    box-shadow: 0 0 0 2px rgb(255, 255, 255);
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  .animated-button1 {
+    width: 150px;
+    height: 50px;
+    left: 40px;
+    top: 20px
   }
-  
-  .animated-button svg {
-    position: absolute;
-    width: 24px;
-    fill: rgb(255, 255, 255);
-    z-index: 9;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .animated-button .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 10px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .animated-button:hover .circle {
-    width: 220px;
-    height: 220px;
-    opacity: 1;
-  }
-  html, body {
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Cache tout débordement horizontal */
-  }
-  
 }

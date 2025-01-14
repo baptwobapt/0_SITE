@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="Cv.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="header.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1, maximum-scale=1.1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
@@ -50,14 +49,15 @@
         <div class="card">
             <div class="inter">
                 <div class="inter2">
-
-                    <h2>CV Baptiste LOUIS</h2>
-                    <img src="image/moilog.png" alt="moi" class="moi">
-                    <div class="st" >
-                        <h6>33130 Bègles</h6>
-                        <h6>baptiste.louis33470@gmail.com</h6>
-                        <h6>0768197490</h6>
-                        <h6>15/04/2006</h6>
+                    <div class="entetecv">
+                        <h2>CV Baptiste LOUIS</h2>
+                        <img src="image/moilog.png" alt="moi" class="moi">
+                        <div class="st" >
+                            <h6>33130 Bègles</h6>
+                            <h6>baptiste.louis33470@gmail.com</h6>
+                            <h6>0768197490</h6>
+                            <h6>15/04/2006</h6>
+                        </div>
                     </div>
                     <h4>DIPLOMES</h4>
                     <p>•Brevet des collèges en 2021 au collège Chante Cigale ( mention bien )</p>
@@ -71,8 +71,8 @@
                     <h5>Createur</h5>
                     <p>j'aime innover , créer mon propre chemin</p>
                     <h4>EDUCATION ET OBJECTIF</h4>
-                    <p><span style="font-size: medium; font-weight: 900;">Terminale STI2D</span>, Lycée de la mer Gujan-Mestras</p>
-                    <p><span style="font-size: medium; font-weight: 900;">MMI</span> , IUT Bordeaux Montaigne
+                    <p><span style="font-size: 110%; font-weight: 900;">Terminale STI2D</span>, Lycée de la mer Gujan-Mestras</p>
+                    <p><span style="font-size: 110%; font-weight: 900;">MMI</span> , IUT Bordeaux Montaigne
                         Bordeaux</p>
                     <h4>DÉPLACEMENT</h4>
                     <p>J'ai une voiture et une trottinette électrique qui me permet de circuler facilement et j'aime tout aussi faire du vélo .</p>
@@ -106,18 +106,41 @@
                     <h4>CERTIFICATS</h4>
                     <div class="separcertif">
                         <div>
-                            <p><span style="font-size: medium; font-weight: 900;">Assr</span></p>
+                            <p><div class="certifcv">Assr</div></p>
                             <p>Niveau 1 et 2</p>
                         </div>
-                        <p><span style="font-size: medium; font-weight: 900;">Permis de conduire</span></p>
+                            <p><div class="certifcv">Permis de conduire</div>
                         <div>
-                            <p><span style="font-size: medium; font-weight: 900;">Baccalauréat</span></p>
+                            <p><div class="certifcv">Baccalauréat</div><p>
                             <p>sciences et technologies de l'industrie et du développement durable</p> 
                         </div>
                     </div>    
                 </div>
             </div>
         </div>
+        <button onclick="downloadFile()" class="animated-button">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+            <span class="text">Télécharger le CV</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+        </button>
+        
+        <script>
+            function downloadFile() {
+                const link = document.createElement('a'); // Crée un élément <a>
+                link.href = 'image/Cv.png'; // Définit le chemin de l'image
+                link.download = 'Cv.png'; // Définit le nom du fichier téléchargé
+                link.click(); // Simule un clic pour déclencher le téléchargement
+            }
+        </script>
     <script src="header.js"></script>
     <footer class="main-footer">
         <div class="part1f">
