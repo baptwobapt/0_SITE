@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Fonction pour vérifier la largeur de l'écran
   function checkScreenSize() {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 1025) {
       // Si la largeur de l'écran est inférieure à 800px, on applique l'effet de clic
       card.addEventListener('click', toggleCardRotation);
     } else {

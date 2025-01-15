@@ -243,7 +243,7 @@ body h2 {
     color: #ffffff; /* Change la couleur en fonction de tes besoins */
 
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .swiper-container {
     width: 170px;
     height: 85px; /* Hauteur du carrousel */
@@ -324,6 +324,15 @@ body h2 {
   .nav-dot[for=slide4] {
     left: 120px;
   }
-
-
+  body h1 {
+    text-shadow: 3px 3px rgb(177, 177, 177);
+  }
+  .justepourtitredebut {
+    margin-top: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .justepourtitredebut {
+    margin-top: 550px;
+  }
 }

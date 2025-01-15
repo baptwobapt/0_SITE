@@ -249,7 +249,7 @@
     transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
     pointer-events: auto;
 }
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
     .linebas {
         position: relative; /* Position absolue pour permettre un placement précis par rapport au header */
         top: 100%;

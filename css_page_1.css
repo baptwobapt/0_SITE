@@ -164,6 +164,7 @@ h2 {
   margin: 20px;
   padding-left: 60px;
   padding-right: 60px;
+  font-family: "Roboto", sans-serif;
 
 
 }
@@ -416,7 +417,7 @@ h1 {
   margin-bottom: -100px;
 }
 .espace {
-  margin-top: 45%;
+  margin-top: 55%;
 }
 .model-3d-container {
   height: 100%;
@@ -473,7 +474,7 @@ h1 {
   vertical-align: top; /* Aligne le texte dynamiquement */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .mockupapropocontact {
     display: flex;
     align-items: center;
@@ -504,16 +505,16 @@ h1 {
   .card {
     margin: auto;
     width: 300px;
-    height: 520px;
+    height: 480px;
   }
   p {
     font-size: 17px;
   } 
   .desc {
     text-align: start;
-    margin: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .moi {
     width: 60%;
@@ -558,5 +559,11 @@ h1 {
   }
   .fortitlesize {
     font-size: 30px;
+  }
+  * {
+    outline: 1px solid red; /* Met en évidence les éléments pour vérifier ce qui dépasse */
+  }
+  .espace {
+    margin-top: 0px;
   }
 }

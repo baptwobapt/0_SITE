@@ -25,7 +25,7 @@ const swiper = new Swiper('.swiper-container', {
 
 // Fonction pour ajuster les paramètres dynamiquement
 function resizeSwiper() {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 1025) {
         // Modifie les paramètres pour mobile
         swiper.params.coverflowEffect.rotate = 110; // Réduit l'effet rotate
         swiper.params.spaceBetween = -45; // Ajuste l'écart

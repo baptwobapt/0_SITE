@@ -210,7 +210,7 @@ h3 {
       opacity: 1;
     }
   }
-@media (max-width: 764px) {
+@media (max-width: 1024px) {
   .iconf {
     width: 100%;
     height: fit-content;
