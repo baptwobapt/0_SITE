@@ -119,13 +119,13 @@
 }
 .parttxt1 a {
     text-decoration: none; /* Supprime le soulignement des liens */
-    color: inherit; /* Utilise la couleur du texte parent */
     display: inline-block; /* Maintient l'espacement correct */
 }
 h3 {
     font-size: 25px;
     display: flex;
     justify-content: center;
+    font-family: "Audiowide", serif;
 }
 /* From Uiverse.io by vinodjangid07 */ 
 .iconf {
@@ -186,8 +186,15 @@ h3 {
     height: 30px;
     width: auto;
   }
+.menu-link {
+  color: #ffffff;
+  font-family: "Audiowide", serif;
+  font-weight: 1000;
+}
+.menu-link:hover {
+  color: #acacac;
+}
 
-  
 
   .socialContainer:hover .socialSvg {
     animation: slide-in-top 0.3s both;
@@ -237,6 +244,6 @@ h3 {
     margin-top: 5px;
   }
   .main-footer {
-    margin-top: 50px;/
+    margin-top: 150px;/
   }
 }

@@ -71,6 +71,11 @@ button {
     z-index: 1;
     margin-left: -240px;
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+.iphonemockup.shift {
+    transform: translateX(150px); /* Décalage de 100px à droite */
 }
 .contactmockup {
     display: flex;
@@ -100,7 +105,16 @@ button {
 }
 .phototexteprojapropos {
     width: 100%;
-    display: flex;
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    margin-top: 100px;
+}
+.phototexteprojapropos2 {
+    width: 100%;
+    display: flex; 
     justify-content: center;
     flex-direction: row;
     gap: 100px;
@@ -153,4 +167,82 @@ button {
     font-size: 25px; 
     text-shadow: none;
     opacity: 0.9;
+}
+@media (max-width: 764px) {
+    .phototexteprojapropos {
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .phototexteprojapropos2 {
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 100px;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .partitextproj {
+
+        width: 100%;
+        text-align: left;
+        font-size: 22px;
+    
+    }
+    .photomidapropos {
+        margin-right: 100px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .guittare {
+        position: relative;
+        width: 200px;
+        height: auto;
+    
+    }
+    .casque {
+        position: relative;
+        width: 200px;
+        height: auto;
+        left: 100px;
+        top: -100px;
+        margin-bottom: -100px;
+    }
+
+    .contactmockup {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .containercontact {
+        display: flex;
+        width: 100% ;
+        margin-bottom: 0px;
+
+    }
+    .contactbas {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .iphonemockup{
+        width: 200px;
+        height: auto;
+        z-index: 1;
+        left: 110%;
+        bottom: 25%;
+        position: absolute;
+        transition: transform 0.3s ease;
+    }
+    .iphonemockup.shift {
+        transform: translateX(200px); /* Décalage de 100px à droite */
+    }
 }

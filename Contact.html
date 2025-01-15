@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="contact-a-propos.css">
+    <link rel="icon" href="image/Logoicon.png" type="image/png">
     <link rel="stylesheet" href="css_carrousel.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.1, maximum-scale=1.1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <a href="index.html">
-            <img src="image/Logo.png" alt="" class="Logo">
+            <img src="image/Logo.webp" alt="" class="Logo">
         </a>
         
         <div class="zoneh" id="zoneh">
@@ -51,8 +51,7 @@
         </div>
         <div class="linebas"></div>
     </header>
-    <h1>Contactez-moi</h1>
-    <div class="margegd">
+    <h1>Contactez-moi</h1> 
         <div class="contactmockup">
             <div class="containercontact">
                 <form id="contactForm" onsubmit="sendEmail(event)">
@@ -76,32 +75,54 @@
                     </button> 
                 </form>
             </div>
-            <img src="image/iPhonemockup.png" alt="iPhonemockup" class="iphonemockup">
+            
+            <a href="Cv.html" >
+                <img src="image/iPhonemockup.webp" alt="iPhonemockup" class="iphonemockup">
+            </a>
         </div>
         <script>
+            // Fonction pour envoyer l'email
             function sendEmail(event) {
                 event.preventDefault(); // Empêche l'envoi classique du formulaire
-
+        
                 // Récupérer les valeurs des champs
                 const name = document.getElementById('name').value;
                 const subject = document.getElementById('subject').value;
                 const message = document.getElementById('message').value;
-
+        
                 // Créer le lien mailto avec un format de message personnalisé
                 const mailtoLink = `mailto:baptiste.louis33470@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`De : ${name}
-
+        
         ${message}`)}`;
-
-                // Ouvrir le client mail avec le lien
+        
+                // Ouvrir le lien mailto
                 window.location.href = mailtoLink;
             }
+        
+            // Déplacement de l'image iPhone au focus/blur des champs
+            document.addEventListener('DOMContentLoaded', () => {
+                // Sélectionner les champs de texte et l'image de l'iPhone
+                const formInputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+                const iphoneMockup = document.querySelector('.iphonemockup');
+        
+                // Ajouter les événements focus et blur à chaque champ de texte
+                formInputs.forEach(input => {
+                    input.addEventListener('focus', () => {
+                        iphoneMockup.classList.add('shift'); // Ajouter la classe pour déplacer l'image
+                    });
+        
+                    input.addEventListener('blur', () => {
+                        iphoneMockup.classList.remove('shift'); // Retirer la classe pour ramener l'image
+                    });
+                });
+            });
         </script>
+        
         <h1>Contactez-moi autrement</h1>
         <div class="contactbas">
             <h2 class="contactbash2">07 68 19 74 90</h2>
             <h2 class="contactbash2">baptiste.louis33470@gmail.com</h2>
         </div>
-    </div>
     <script src="header.js"></script>
     <footer class="main-footer">
         <div class="part1f">

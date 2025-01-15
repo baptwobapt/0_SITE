@@ -11,7 +11,7 @@ html h1,
 body h1 {
   margin-top: 50px;
   margin-bottom: 0;
-  text-shadow: 5px 5px rgba(255, 255, 255, 0.5);
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.5);
 }
 .justepourtitredebut {
   margin-top: 650px;
@@ -260,6 +260,7 @@ body h2 {
     height: 250px;
     margin-top: 200px;
     overflow: hidden; /* Masque tout ce qui dépasse ce conteneur */
+    max-width: 450px;
   }
   .swiper-button-next {
     right: -5px;

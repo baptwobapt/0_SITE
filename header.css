@@ -143,6 +143,7 @@
     pointer-events: none;
     font-size: 20px;
     cursor: pointer; /* Le curseur par défaut, pour éviter de montrer un élément cliquable */
+
 }
 
 .zoneh.active .menu-texts {
