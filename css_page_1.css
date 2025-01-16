@@ -560,9 +560,6 @@ h1 {
   .fortitlesize {
     font-size: 30px;
   }
-  * {
-    outline: 1px solid red; /* Met en évidence les éléments pour vérifier ce qui dépasse */
-  }
   .espace {
     margin-top: 0px;
   }
