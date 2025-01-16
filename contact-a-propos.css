@@ -244,7 +244,8 @@ button {
         height: auto;
         z-index: 1;
         position: relative;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
+        left: 30px;
     }
     .iphonemockup.shift {
         transform: translateX(200px); /* Décalage de 100px à droite */
