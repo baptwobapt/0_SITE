@@ -563,4 +563,8 @@ h1 {
   .espace {
     margin-top: 0px;
   }
+
+  p {
+    line-height: 1.3; /* Augmente l'espace entre les lignes */
+  }
 }

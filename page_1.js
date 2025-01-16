@@ -85,4 +85,3 @@ document.addEventListener('DOMContentLoaded', function () {
   // Vérifier à chaque redimensionnement de la fenêtre
   window.addEventListener('resize', checkScreenSize);
 });
-

@@ -15,7 +15,7 @@
     display: flex; /* Fixe le header en haut de l'écran */
     top: 0px ; /* Position à 0px du haut */
     left: 0px; /* Position à 0px de la gauche */
-    width: 100%; /* Le header occupe toute la largeur de l'écran */
+    width: 90%; /* Le header occupe toute la largeur de l'écran */
     height: 80px; /* Hauteur du header */
     color: #fff; /* Couleur du texte */
     font-family: "Raleway", sans-serif;
@@ -234,7 +234,7 @@
 
 /* Lorsque .zoneh a la classe active, chaque menu-text est animé vers la gauche */
 .zoneh.active .menu-text1 {
-    transform: translateX(-420%); /* Déplace le premier texte de 30% vers la gauche */
+    transform: translateX(-520%); /* Déplace le premier texte de 30% vers la gauche */
     transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
     pointer-events: auto;
 }
@@ -249,18 +249,65 @@
     transition: transform 0.3s ease-in-out, opacity 0.00001s ease-in-out;
     pointer-events: auto;
 }
+
+
+/* Menu burger */
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Menu hors de l'écran */
+    width: 100%;
+    height: 110%;
+    backdrop-filter: blur(20px);
+    background-color: #0c0c0cce;
+    
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1500; /* En dessous de zoneh */
+    transition: right 0.3s ease-in-out; /* Animation fluide */
+}
+/* Lien du menu */
+.menu-linksburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    
+    
+}
+.menu-linksburger a {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 25px 0;
+    transition: color 0.3s ease-in-out;
+    font-family: "Audiowide", serif;
+}
+
+.menu-linksburger a:hover {
+    color: #9c9c9c; /* Couleur au survol */
+}
+
+/* Classe active pour afficher le menu */
+.burger-menu.active {
+    right: 0; /* Menu entre en vue */
+}
+
+
 @media (max-width: 1024px) {
     .linebas {
         position: relative; /* Position absolue pour permettre un placement précis par rapport au header */
         top: 100%;
-        left: 50%;
+        left: 71%;
         justify-content: center;
         transform: translateX(-50%); /* Décale la ligne de la moitié de sa largeur pour la centrer parfaitement */
-        width:30%;/* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
+        width: 90%;/* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
         height: 1px; /* Épaisseur de la ligne */
         background-color: #c7c7c7; /* Couleur de la ligne */
         border-radius: 6px; /* Pour un effet légèrement arrondi */
-        z-index: 2000;
+        z-index: 1;
     
     }
     .menu-texts {
@@ -269,5 +316,37 @@
     .main-header {
         width: 90%; /* Le header occupe toute la largeur de l'écran */
 
+    }
+    .zoneh {
+        position: fixed; /* Fixe zoneh au même endroit à l'écran */
+        top: 15px;
+        right: 20px;
+        z-index: 3000; /* Plus élevé que le menu burger */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        background-color: transparent; /* Transparent pour ne pas cacher d'autres éléments */
+        cursor: pointer;
+    }
+    .Logo {
+        position: fixed;
+        z-index: 2000;
+    }
+    #zoneh, #logo {
+        opacity: 0; /* Complètement invisible par défaut */
+        pointer-events: none; /* Désactive les interactions quand invisible */
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    #zoneh.show, #logo.show {
+        opacity: 1; /* Visible */
+        pointer-events: auto; /* Interactif quand visible */
+    }
+    .zoneh.active {        
+        width: 80px;
+        height: 80px;
     }
 }

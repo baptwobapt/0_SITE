@@ -82,6 +82,12 @@ body {
     
     
 }
+p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5; /* Augmente l'espace entre les lignes */
+    word-spacing: 1px; /* Augmente l'espace entre les mots */
+      
+}
 
 .card1:hover {
     margin-bottom: 43.5px;
@@ -136,4 +142,4 @@ body {
         
 
     }
-}
+} 
