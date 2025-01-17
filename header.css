@@ -15,7 +15,7 @@
     display: flex; /* Fixe le header en haut de l'écran */
     top: 0px ; /* Position à 0px du haut */
     left: 0px; /* Position à 0px de la gauche */
-    width: 90%; /* Le header occupe toute la largeur de l'écran */
+    width: 100%; /* Le header occupe toute la largeur de l'écran */
     height: 80px; /* Hauteur du header */
     color: #fff; /* Couleur du texte */
     font-family: "Raleway", sans-serif;
@@ -303,10 +303,10 @@ body.no-scroll {
     .linebas {
         position: relative; /* Position absolue pour permettre un placement précis par rapport au header */
         top: 100%;
-        left: 71%;
+        left: 77%;
         justify-content: center;
         transform: translateX(-50%); /* Décale la ligne de la moitié de sa largeur pour la centrer parfaitement */
-        width: 90%;/* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
+        width: 100%;/* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
         height: 1px; /* Épaisseur de la ligne */
         background-color: #c7c7c7; /* Couleur de la ligne */
         border-radius: 6px; /* Pour un effet légèrement arrondi */
@@ -317,7 +317,7 @@ body.no-scroll {
         display: none;
     }
     .main-header {
-        width: 90%; /* Le header occupe toute la largeur de l'écran */
+        width: 80%; /* Le header occupe toute la largeur de l'écran */
 
     }
     .zoneh {
