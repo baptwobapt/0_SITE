@@ -294,7 +294,10 @@
 .burger-menu.active {
     right: 0; /* Menu entre en vue */
 }
-
+body.no-scroll {
+    overflow: hidden; /* Empêche le défilement */
+    height: 100%; /* Évite les décalages d'arrière-plan */
+}
 
 @media (max-width: 1024px) {
     .linebas {
