@@ -228,7 +228,7 @@ h5 {
   }
   
   .animated-button:hover .circle {
-    width: 220px;
+    width: 220px; 
     height: 220px;
     opacity: 1;
   }

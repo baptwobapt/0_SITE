@@ -55,6 +55,7 @@ input, textarea, button {
     background-color: #0c0c0c;
     backdrop-filter: blur(1px);
     color: azure;
+    font-family: "Roboto", sans-serif;
 }
 textarea {
     resize: vertical;
