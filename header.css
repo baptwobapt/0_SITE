@@ -298,6 +298,33 @@ body.no-scroll {
     overflow: hidden; /* Empêche le défilement */
     height: 100%; /* Évite les décalages d'arrière-plan */
 }
+.annoncestage {
+    position: absolute;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background-color: rgba(245, 245, 245, 0.342);
+    cursor: default; 
+    font-size: 18px;
+    pointer-events: auto; 
+    width: 100%;
+    height: 30px;
+    top: 90px;
+}
+
+.annoncestage a {
+    color: #ffffff; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    cursor: pointer; 
+    pointer-events: auto; 
+}
+
+.annoncestage a:hover {
+    color: #dadada; 
+    text-decoration: underline; 
+}
+
 
 @media (max-width: 1024px) {
     .linebas {
@@ -312,6 +339,10 @@ body.no-scroll {
         border-radius: 6px; /* Pour un effet légèrement arrondi */
         z-index: 1;
     
+    }
+    .annoncestage {
+        height: auto;
+        top: 90px;
     }
     .menu-texts {
         display: none;
