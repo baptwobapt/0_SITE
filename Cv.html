@@ -158,13 +158,13 @@
                 </div>
             </div>
         </div>
-        <button onclick="downloadFile()" class="animated-button">
+        <button onclick="openCV()" class="animated-button">
             <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
                 ></path>
             </svg>
-            <span class="text">Télécharger le CV</span>
+            <span class="text">Voir mon CV</span>
             <span class="circle"></span>
             <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -174,16 +174,11 @@
         </button>
         
         <script>
-            function downloadFile() {
-                const link = document.createElement('a'); // Crée un élément <a>
-                link.href = 'https://baptistelouis.fr/image/Cvpdf.pdf'; // URL complète du fichier PDF
-                link.target = '_blank'; // Ouvre dans un nouvel onglet
-                link.download = 'Cv_Baptiste_Louis.pdf'; // Nom du fichier téléchargé
-                document.body.appendChild(link); // Ajoute l'élément à la page
-                link.click(); // Simule un clic pour déclencher le téléchargement
-                document.body.removeChild(link); // Supprime l'élément après le clic
+            function openCV() {
+                window.open('https://baptistelouis.fr/image/Cvpdf.pdf', '_blank'); // Ouvre le CV dans un nouvel onglet
             }
         </script>
+        
         
     <script src="header.js"></script>
     <footer class="main-footer">
