@@ -176,11 +176,15 @@
         <script>
             function downloadFile() {
                 const link = document.createElement('a'); // Crée un élément <a>
-                link.href = 'image/Cv.pnp'; // Définit le chemin de l'image
-                link.download = 'Cv.png'; // Définit le nom du fichier téléchargé
+                link.href = 'https://baptistelouis.fr/image/Cvpdf.pdf'; // URL complète du fichier PDF
+                link.target = '_blank'; // Ouvre dans un nouvel onglet
+                link.download = 'Cv_Baptiste_Louis.pdf'; // Nom du fichier téléchargé
+                document.body.appendChild(link); // Ajoute l'élément à la page
                 link.click(); // Simule un clic pour déclencher le téléchargement
+                document.body.removeChild(link); // Supprime l'élément après le clic
             }
         </script>
+        
     <script src="header.js"></script>
     <footer class="main-footer">
         <div class="part1f">
