@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", function() {
   let loader = document.getElementById("videoLoader");
   let content = document.getElementById("mainContent");
 
-  // Désactiver le scroll au début
+  // Désactiver le scroll temporairement
   document.body.classList.add("no-scroll");
 
-  // Vérifie si c'est un rechargement de page
-  if (performance.navigation.type === 1) {
-      // Si c'est un rechargement, joue la vidéo
+  // Vérifie si c'est un rechargement de page ou une première ouverture
+  if (performance.navigation.type === 1 || !sessionStorage.getItem('videoPlayed')) {
+      // Si c'est un rechargement ou la vidéo n'a pas encore été jouée
       video.play();
 
       video.onended = function() {
@@ -109,13 +109,16 @@ document.addEventListener("DOMContentLoaded", function() {
                   content.style.opacity = "1"; // Fade-in du contenu principal
                   document.body.classList.remove("no-scroll"); // Réactiver le scroll
               }, 100);
-          }, 500); // Temps du fade-out avant de masquer complètement
+          }, 1000); // Temps du fade-out avant de masquer complètement
       };
+
+      // Marquer la vidéo comme lue en sessionStorage pour ne pas la relancer lors de la navigation interne
+      sessionStorage.setItem('videoPlayed', 'true');
   } else {
-      // Si c'est une navigation entre pages, passe directement au contenu
+      // Si c'est une navigation entre pages (pas un rechargement)
       loader.style.display = "none";
       content.style.display = "block";
       content.style.opacity = "1";
-      document.body.classList.remove("no-scroll"); // Activer le scroll
+      document.body.classList.remove("no-scroll"); // Réactiver le scroll
   }
 });
