@@ -155,6 +155,48 @@ h2 {
   color: #888;
   font-size: 2em;
 }
+/* Style du loader vidéo */
+/* Empêche le scroll pendant la vidéo */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Style du loader vidéo */
+#videoLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  overflow: hidden;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Plein écran pour la vidéo */
+#videoLoader video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cache le contenu principal au début */
+#mainContent {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .moi {
   width: 60%;
   margin-top: 50px;
