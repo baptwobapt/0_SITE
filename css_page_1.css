@@ -162,6 +162,18 @@ body.no-scroll {
   height: 100vh;
 }
 
+body {
+  background-color: #0c0c0c;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Empêcher le scroll pendant la vidéo */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 /* Style du loader vidéo */
 #videoLoader {
   position: fixed;
@@ -169,32 +181,32 @@ body.no-scroll {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: black;
+  background-color: #000000; /* Fond noir */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
+  z-index: 1000;
   overflow: hidden;
-  transition: opacity 0.5s ease-out;
+  transition: opacity 1s ease-out;
 }
 
-/* Plein écran pour la vidéo */
+/* Centrer la vidéo et l'ajuster */
 #videoLoader video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;  /* Maintient les proportions sans découper la vidéo */
+  max-width: 100%;      /* Assure que la vidéo ne dépasse pas la largeur de l'écran */
+  max-height: 100%;     /* Assure que la vidéo ne dépasse pas la hauteur de l'écran */
 }
 
-/* Cache le contenu principal au début */
+/* Cacher le contenu principal au début */
 #mainContent {
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-body.no-scroll {
-    overflow: hidden;
-    height: 100vh;
+  transition: opacity 1s ease-in;
+  color: #fff; /* Texte blanc pour contraster avec le fond noir */
+  text-align: center;
+  padding: 20px;
 }
 
 .moi {
@@ -615,5 +627,12 @@ h1 {
 
   p {
     line-height: 1.3; /* Augmente l'espace entre les lignes */
+  }
+  #videoLoader {
+    background-color: #000000; /* Toujours noir pour mobile */
+  }
+
+  #mainContent {
+      padding: 10px; /* Un peu plus petit pour mobile */
   }
 }
