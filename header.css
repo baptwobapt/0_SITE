@@ -77,7 +77,7 @@
 .linebas {
     position: relative; /* Position absolue pour permettre un placement précis par rapport au header */
     left: 55%; /* Place la ligne au centre horizontalement du header */
-    top: 70%;
+    top: 100%;
     transform: translateX(-50%); /* Décale la ligne de la moitié de sa largeur pour la centrer parfaitement */
     width: 90%; /* Ajustez la largeur de la ligne en fonction de la taille souhaitée */
     height: 1px; /* Épaisseur de la ligne */

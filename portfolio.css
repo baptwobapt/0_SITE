@@ -48,6 +48,13 @@ body {
     width: 330px;
 
 }
+.miniaBlogArt{
+    margin-left: -15px;
+    margin-top: -10px;
+    width: 330px;
+
+}
+
 .miniapack {
     margin-left: -15px;
     margin-top: -10px;
@@ -64,6 +71,17 @@ body {
     margin-top: -9px;
     width: 330px;
 
+}
+.videoscratch {
+    width: 100%;
+    max-width: 400px; /* Ajustez selon votre mise en page */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.videoscratch:hover {
+    transform: scale(1.05);
 }
 .card1 {
     margin-bottom: 150px;

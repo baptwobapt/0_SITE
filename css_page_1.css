@@ -206,7 +206,6 @@ body.no-scroll {
   transition: opacity 1s ease-in;
   color: #fff; /* Texte blanc pour contraster avec le fond noir */
   text-align: center;
-  padding: 20px;
 }
 
 .moi {
