@@ -33,6 +33,10 @@
     <link rel="stylesheet" href="css_carrousel.css">
     <link rel="stylesheet" href="Projetunparun.css">
     <link rel="stylesheet" href="Portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
     <!-- Icône de la page -->
     <link rel="icon" href="https://baptistelouis.fr/image/Logoicon.png" type="image/png">
@@ -97,10 +101,18 @@
     <section>
         <div class="phototexteproj">
             <div class="toutelesphotoproj">
-                <div><img src="image/photo1proj1.webp" alt="photoproj1" class="photoproj"></div>
-                <div><img src="image/photo2proj1.webp" alt="photoproj1" class="photoproj"></div>
-                <div><img src="image/photo3proj1.webp" alt="photoproj1" class="photoproj"></div>
-                <div><img src="image/photo4proj1.webp" alt="photoproj1" class="photoproj"></div>
+                <a href="image/photo1proj1.webp" data-lightbox="gallery" data-title="Première image">
+                    <img src="image/photo1proj1.webp" alt="Image 1" class="photoproj">
+                </a>                
+                <a href="image/photo2proj1.webp" data-lightbox="gallery" data-title="Deuxième image">
+                    <img src="image/photo2proj1.webp" alt="Image 2" class="photoproj">
+                </a>
+                <a href="image/photo3proj1.webp" data-lightbox="gallery" data-title="Troisième image">
+                    <img src="image/photo3proj1.webp" alt="Image 3" class="photoproj" >
+                </a>
+                <a href="image/photo4proj1.webp" data-lightbox="gallery" data-title="Quatrieme image">
+                    <img src="image/photo4proj1.webp" alt="Image 4" class="photoproj">
+                </a>
             </div>
             <div class="partitextproj">
                 <p>Début septembre, j’ai eu l’opportunité de participer à un projet ambitieux : concevoir un jeu vidéo sur le thème des mythes et légendes, en seulement trois jours. Le concept était simple mais efficace : un jeu de combat multijoueur en plateforme, où deux joueurs s’affrontent sur le même ordinateur.
@@ -137,14 +149,16 @@
                 </button>    
             </div>
             <div class="presfinalbas">
-                <a href="https://youtu.be/LfhbsKuwiUs" target="_blank">
+                <a href="https://youtu.be/LfhbsKuwiUs" target="_blank" class="video-container">
                     <img src="image/photo1proj1.webp" alt="Regarder la vidéo" class="videoscratch">
+                    <div class="play-button"></div>
                 </a>
             </div>
             
             
+            
         </div>
-    </section
+    </section>
     <footer class="main-footer">
         <div class="part1f">
             <div class="phtxt">
