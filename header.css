@@ -427,4 +427,11 @@ body.no-scroll {
         width: 80px;
         height: 80px;
     }
+    .cursor {
+        display: none;
+    }
+      
+    .cursor2 {
+        display: none;
+    }
 }
