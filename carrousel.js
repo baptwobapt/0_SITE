@@ -1,44 +1,33 @@
-// Initialisation du Swiper
-const swiper = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 3,
-    spaceBetween: 25, // Valeur initiale de l'écart
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    coverflowEffect: {
-        rotate: 50, // Valeur par défaut pour desktop
-        stretch: -200,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+const carouselTrack = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-slide');
+
+// Double clonage pour couvrir l'espace avant et après
+slides.forEach(slide => {
+  const clone1 = slide.cloneNode(true);
+  carouselTrack.appendChild(clone1);
 });
 
-// Fonction pour ajuster les paramètres dynamiquement
-function resizeSwiper() {
-    if (window.innerWidth < 1025) {
-        // Modifie les paramètres pour mobile
-        swiper.params.coverflowEffect.rotate = 110; // Réduit l'effet rotate
-        swiper.params.spaceBetween = -45; // Ajuste l'écart
-    } else {
-        // Réinitialise les paramètres pour desktop
-        swiper.params.coverflowEffect.rotate = 50; // Valeur par défaut
-        swiper.params.spaceBetween = 25; // Écart par défaut
-    }
-    swiper.update(); // Applique les modifications
+const trackStyle = window.getComputedStyle(carouselTrack);
+const gap = parseFloat(trackStyle.gap) || 0;
+const slideWidth = slides[0].offsetWidth + gap;
+const totalWidth = slideWidth * slides.length;
+let currentPosition = 0;
+let animationId;
+const speed = 75; // pixels/seconde
+
+function animate(timestamp) {
+  if (!animationId) animationId = { lastTime: timestamp };
+  
+  const deltaTime = timestamp - animationId.lastTime;
+  currentPosition += (speed * deltaTime) / 1000;
+  
+  // Rebouclage progressif
+
+  
+  carouselTrack.style.transform = `translateX(-${currentPosition}px)`;
+  animationId.lastTime = timestamp;
+  requestAnimationFrame(animate);
 }
 
-// Appel initial au chargement de la page
-resizeSwiper();
-
-// Écoute les redimensionnements de la fenêtre
-window.addEventListener('resize', resizeSwiper);
+// Démarrage de l'animation
+requestAnimationFrame(animate);
